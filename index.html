@@ -1,34 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | IP Address Tracker</title>
+    <title>IP Address Tracker</title>
+    <link rel="stylesheet" href="src/scss/main.scss" />
+    <link
+      rel="stylesheet"
+      href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <script src="src/js/App.js" defer></script>
+  </head>
+  <body class="container-fluid remove-all-margin">
+    <article class="w-100">
+      <section class="w-100 min-vh-100">
+        <video
+          autoplay
+          muted
+          loop
+          class="w-100 position-absolute video-bg"
+          id="myVideo"
+        >
+          <source src="src/images/city.mp4" class="test2" type="video/mp4" />
+        </video>
+        <!-- <img
+          src="src/images/pattern-bg.png"
+          class="img-fluid w-100 position-absolute spacer-h-25 zindex-3 contain"
+          alt=""
+        /> -->
+        <div class="position-relative">
+          <h1 class="text-center text-white pt-5">IP Address Tracker</h1>
 
-  IP Address Tracker
+          <div class="d-flex flex-row justify-content-center w-100 mt-5">
+            <input
+              placeholder="Search for any IP address or domain"
+              type="text"
+              class="text-dark d-block w-25 rounded bg-light border-none text-center"
+              data-inputVal
+            />
 
-  Search for any IP address or domain
+            <button class="btn btn-dark" data-fetch>
+              <i class="bi bi-chevron-right"></i>
+            </button>
+          </div>
 
-  IP Address
-  Location
-  Timezone
-    UTC <!-- add offset value dynamically using the API -->
-  ISP
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+          <div
+            data-information
+            class="row maxx text-center overflow-hidden w-75 justify-content-center position-absolute mt-7 translate-middle-x start-50 bg-light rounded high-zindex"
+          >
+            <button
+              class="position-relative hide-button translate-middle-x start-50 bg-danger text-white border border-white"
+            >
+              <i class="bi bi-chevron-right hide-icon"></i>
+            </button>
+            <div
+              class="col p-2 w-100 col-min-h mx-auto my-auto position-relative"
+            >
+              <h6>IP Address</h6>
+              <h2 data-ip></h2>
+            </div>
+            <div
+              class="col p-2 w-100 col-min-h mx-auto my-auto border-start position-relative"
+            >
+              <h6>Location</h6>
+              <h2 data-location></h2>
+            </div>
+            <div
+              class="col p-2 w-100 col-min-h mx-auto my-auto border-start position-relative"
+            >
+              <h6>Timezone UTC</h6>
+              <h2 data-timezone></h2>
+            </div>
+            <div
+              class="col p-2 w-100 col-min-h mx-auto my-auto border-start position-relative"
+            >
+              <h6>ISP</h6>
+              <h3 data-isp></h3>
+            </div>
+          </div>
+        </div>
+        <div id="map-holder" class="container-fluid">
+          <div id="map"></div>
+        </div>
+      </section>
+    </article>
+  </body>
 </html>

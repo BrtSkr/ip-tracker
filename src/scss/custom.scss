@@ -1,0 +1,100 @@
+@import '../../node_modules/bootstrap/scss/bootstrap.scss';
+
+.remove-all-margin{
+    margin: 0 !important;
+    padding: 0 !important;
+}
+.zindex-3{
+    z-index: -3333;
+}
+.high-zindex{
+    z-index: 3333;
+}
+.mt-7{
+    margin-top: ($spacer * 7.5) !important;
+}
+.outline-none{
+    outline: none;
+}
+.video-bg{
+    overflow: auto;
+    min-width: 100% !important;
+    height: 90vh;
+    object-fit: fill;
+    margin-top: ($spacer * -12);
+    opacity: 0.1;
+}
+.contain{
+    background-size: 100% !important;
+}
+.min-vh-25{
+    min-height: 20vh !important;
+}
+.spacer-h-25{
+    height: ($spacer * 25);
+}
+.spacer-h-10{
+   height: ($spacer * 10);
+}
+.border-none{
+    border: none;
+}
+.hide-button{
+    border: white 1px solid;
+}
+.hide-icon{
+    display: block;
+    font-size: ($spacer * 1.5);
+    transition: .3s;
+    transform: rotateZ(90deg);
+}
+.rotate-z-90{
+  transform: rotateZ(-90deg);
+  transition: .3s;
+}
+.remove-all-padding{
+    padding: 1;
+}
+img{
+    max-width: 100% !important;
+   
+}
+body{
+    background: #222;
+}
+#map{
+    min-height: 70vh;
+    margin: 0 !important;
+    padding: 0;
+}
+#map-holder{
+ width: 100%;
+ max-height: 50vh;
+ margin: ($spacer * 10) 0 0 0 !important;
+     padding: 0;
+}
+.col-min-h{
+    min-height: ($spacer * 6) !important;
+    transition: .5s;
+}
+.maxer{
+    height: 40px !important;
+    transition: .5s !important;
+}
+::-webkit-scrollbar {
+  background: $dark;
+  width: 0.4rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $red;
+  border-radius: 30px 0 0 30px;
+}
+@media screen and (max-width: 574px){
+   .maxx{
+       border-radius: 20px !important;
+   }
+   .col-min-h{
+       
+   }
+}
