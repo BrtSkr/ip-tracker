@@ -22255,12 +22255,13 @@ var fetchInfo = function fetchInfo(IP_API) {
       var responseJSON = res.json();
 
       if (res.ok) {
-        //if response is ok then it return responseJSON variable
+        //if response is ok then return responseJSON variable
         return responseJSON;
       }
 
       if (!res.ok) {
-        //I don't have to comment this
+        errorPopup.classList.add('error-popup-show'); //I don't have to comment this
+
         console.log("something fooked up");
         return;
       }
@@ -22334,6 +22335,11 @@ addEventListener("load", function () {
 document.querySelector(".hide-button").addEventListener("click", function () {
   document.querySelector("[data-information]").classList.toggle("maxer");
   document.querySelector(".hide-icon").classList.toggle("rotate-z-90");
+}); //displays errorPopup (Please go back and check API response to see where 'error-popup-show' is being added)
+
+var errorPopup = document.querySelector(".error-popup");
+errorPopup.addEventListener('click', function () {
+  errorPopup.classList.remove('error-popup-show');
 });
 },{"bootstrap":"node_modules/bootstrap/dist/js/bootstrap.esm.js","leaflet":"node_modules/leaflet/dist/leaflet-src.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
@@ -22363,7 +22369,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "37569" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "35271" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

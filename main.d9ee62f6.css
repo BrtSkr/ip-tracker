@@ -23955,6 +23955,10 @@ textarea.form-control-lg {
   z-index: 3333;
 }
 
+.on-top {
+  z-index: 33333 !important;
+}
+
 .mt-7 {
   margin-top: 7.5rem !important;
 }
@@ -24004,12 +24008,13 @@ textarea.form-control-lg {
 }
 
 .rotate-z-90 {
-  transform: rotateZ(-90deg);
+  display: block;
+  transform: rotateZ(-90deg) !important;
   transition: 0.3s;
 }
 
 .remove-all-padding {
-  padding: 1;
+  padding: 0 !important;
 }
 
 img {
@@ -24057,6 +24062,18 @@ body {
   .maxx {
     border-radius: 20px !important;
   }
+}
+.error-popup {
+  margin-top: 3rem;
+  cursor: pointer;
+  transition: 0.5s;
+  transform: translateY(-30rem) !important;
+  min-height: 15rem;
+}
+
+.error-popup-show {
+  transform: translateY(0rem) translateX(50%) !important;
+  transition: 0.5s;
 }
 
 /*# sourceMappingURL=/main.d9ee62f6.css.map */
