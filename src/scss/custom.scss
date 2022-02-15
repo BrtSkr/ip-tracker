@@ -10,6 +10,9 @@
 .high-zindex{
     z-index: 3333;
 }
+.on-top{
+    z-index: 33333 !important;
+}
 .mt-7{
     margin-top: ($spacer * 7.5) !important;
 }
@@ -27,6 +30,7 @@
 .contain{
     background-size: 100% !important;
 }
+
 .min-vh-25{
     min-height: 20vh !important;
 }
@@ -49,11 +53,12 @@
     transform: rotateZ(90deg);
 }
 .rotate-z-90{
-  transform: rotateZ(-90deg);
+  display: block;
+  transform: rotateZ(-90deg) !important;
   transition: .3s;
 }
 .remove-all-padding{
-    padding: 1;
+    padding: 0 !important;
 }
 img{
     max-width: 100% !important;
@@ -94,4 +99,16 @@ body{
    .maxx{
        border-radius: 20px !important;
    }
+}
+.error-popup{
+    margin-top: ($spacer * 3);
+    cursor: pointer;
+    transition: .5s;
+    transform: translateY($spacer * -30)  !important;
+    min-height: ($spacer * 15);
+}
+.error-popup-show{
+    transform: translateY($spacer * 0) translateX(50%) !important;
+    transition: .5s;
+    
 }

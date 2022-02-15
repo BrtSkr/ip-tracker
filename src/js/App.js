@@ -13,12 +13,14 @@ const fetchInfo = (IP_API) => {
         const responseJSON = res.json();
 
         if (res.ok) {
-          //if response is ok then it return responseJSON variable
+          //if response is ok then return responseJSON variable
           return responseJSON;
         }
         if (!res.ok) {
+          errorPopup.classList.add('error-popup-show');
           //I don't have to comment this
           console.log("something fooked up");
+          
           return;
         }
       })
@@ -95,3 +97,10 @@ document.querySelector(".hide-button").addEventListener("click", () => {
   document.querySelector("[data-information]").classList.toggle("maxer");
   document.querySelector(".hide-icon").classList.toggle("rotate-z-90");
 });
+
+
+//displays errorPopup (Please go back and check API response to see where 'error-popup-show' is being added)
+const errorPopup = document.querySelector(".error-popup");
+errorPopup.addEventListener('click', () => {
+  errorPopup.classList.remove('error-popup-show');
+})
