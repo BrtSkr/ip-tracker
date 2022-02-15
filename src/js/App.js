@@ -27,9 +27,12 @@ const fetchInfo = (IP_API) => {
         location.textContent = `${proc.country} ${proc.region} ${proc.city}`;
         timezone.textContent = proc.timezone;
         isp.textContent = proc.org;
+        
 
-        let lat = proc.loc.slice(0, 7); //get only lat from API response
-        let long = proc.loc.slice(8); //get only long from API response
+        let coords = proc.loc.split(',')
+        let lat = coords[0]; //get only lat from API response
+        let long = coords[1]; //get only long from API response
+        console.log(lat, long)
         console.log(proc);
         loadMap(lat, long);
       });
