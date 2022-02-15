@@ -22269,10 +22269,12 @@ var fetchInfo = function fetchInfo(IP_API) {
       location.textContent = "".concat(proc.country, " ").concat(proc.region, " ").concat(proc.city);
       timezone.textContent = proc.timezone;
       isp.textContent = proc.org;
-      var lat = proc.loc.slice(0, 7); //get only lat from API response
+      var coords = proc.loc.split(',');
+      var lat = coords[0]; //get only lat from API response
 
-      var long = proc.loc.slice(8); //get only long from API response
+      var long = coords[1]; //get only long from API response
 
+      console.log(lat, long);
       console.log(proc);
       loadMap(lat, long);
     });
@@ -22361,7 +22363,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "41089" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "37569" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
