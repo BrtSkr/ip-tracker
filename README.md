@@ -16,8 +16,8 @@ Project is created with:
 
 
 ## Setup
-To run this project on frontend:
-* ```$npm i -D parcel```
+To run this project:
+* ```$npm i -D parcel-bundler```
 * ```$npm run dev```
 
 To create a build:
