@@ -13,6 +13,7 @@ Project is created with:
 * parcel-bundler 1.12.5
 * bootstrap 5.1.3
 * bootstrap-icons 1.8.1
+* SCSS/SASS
 
 
 ## Setup
