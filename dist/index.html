@@ -1,1 +1,68 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>IP Address Tracker</title><link rel="stylesheet" href="main.f9a8e741.css"><link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"><script src="App.2bc799a0.js" defer></script></head><body class="container-fluid remove-all-margin"> <div class="alert alert-danger border border-white error-popup on-top position-fixed remove-all-padding spacer-h-10 text-center w-50" role="alert"> <div class="mt-5 position-absolute text-center w-100"> <h1>You have encountered an error!</h1> <p class="lead">Please make sure you entered IP address correctly</p> </div> </div> <article class="w-100"> <section class="min-vh-100 w-100"> <video autoplay muted loop class="position-absolute video-bg w-100" id="myVideo"> <source src="city.100a5d82.mp4" class="test2" type="video/mp4"> </video>  <div class="position-relative"> <h1 class="pt-5 text-center text-white">IP Address Tracker</h1> <div class="d-flex flex-row justify-content-center mt-5 w-100"> <input placeholder="Search for any IP address or domain" type="text" class="bg-light border-none d-block rounded text-center text-dark w-25" data-inputVal=""> <button class="btn btn-dark" data-fetch=""> <i class="bi bi-chevron-right"></i> </button> </div> <div data-information="" class="bg-light high-zindex justify-content-center maxx mt-7 overflow-hidden position-absolute rounded row start-50 text-center translate-middle-x w-75"> <button class="bg-danger border border-white hide-button position-relative start-50 text-white translate-middle-x"> <i class="bi bi-chevron-right hide-icon"></i> </button> <div class="col col-min-h mx-auto my-auto p-2 position-relative w-100"> <h6>IP Address</h6> <h2 data-ip=""></h2> </div> <div class="border-start col col-min-h mx-auto my-auto p-2 position-relative w-100"> <h6>Location</h6> <h2 data-location=""></h2> </div> <div class="border-start col col-min-h mx-auto my-auto p-2 position-relative w-100"> <h6>Timezone UTC</h6> <h2 data-timezone=""></h2> </div> <div class="border-start col col-min-h mx-auto my-auto p-2 position-relative w-100"> <h6>ISP</h6> <h3 data-isp=""></h3> </div> </div> </div> <div id="map-holder" class="container-fluid"> <div id="map"></div> </div> </section> </article> </body></html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IP Address Tracker</title>
+    <link rel="stylesheet" href="/index.b10d73a7.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css">
+    <script src="/index.06dfd526.js" defer=""></script>
+  </head>
+
+  <body class="container-fluid remove-all-margin">
+    <div class="border border-white alert alert-danger error-popup remove-all-padding on-top spacer-h-10 text-center w-50 position-fixed" role="alert">
+      <div class="w-100 mt-5 text-center position-absolute">
+        <h1 class="">You have encountered an error!</h1>
+        <p class="lead">Please make sure you entered IP address correctly</p>
+      </div>
+    </div>
+    <article class="w-100">
+      <section class="w-100 min-vh-100">
+        <video autoplay="" muted="" loop="" class="w-100 position-absolute video-bg" id="myVideo">
+          <source src="/city.1c584268.mp4" class="test2" type="video/mp4">
+        </video>
+        <!-- <img
+          src="src/images/pattern-bg.png"
+          class="img-fluid w-100 position-absolute spacer-h-25 zindex-3 contain"
+          alt=""
+        /> -->
+        <div class="position-relative">
+          <h1 class="text-center text-white pt-5">IP Address Tracker</h1>
+
+          <div class="d-flex flex-row justify-content-center w-100 mt-5">
+            <input placeholder="Search for any IP address or domain" type="text" class="text-dark d-block w-25 rounded bg-light border-none text-center" data-inputval="">
+
+            <button class="btn btn-dark" data-fetch="">
+              <i class="bi bi-chevron-right"></i>
+            </button>
+          </div>
+
+          <div data-information="" class="row maxx text-center overflow-hidden w-75 justify-content-center position-absolute mt-7 translate-middle-x start-50 bg-light rounded high-zindex">
+            <button class="position-relative hide-button translate-middle-x start-50 bg-danger text-white border border-white">
+              <i class="bi bi-chevron-right hide-icon"></i>
+            </button>
+            <div class="col p-2 w-100 col-min-h mx-auto my-auto position-relative">
+              <h6>IP Address</h6>
+              <h2 data-ip=""></h2>
+            </div>
+            <div class="col p-2 w-100 col-min-h mx-auto my-auto border-start position-relative">
+              <h6>Location</h6>
+              <h2 data-location=""></h2>
+            </div>
+            <div class="col p-2 w-100 col-min-h mx-auto my-auto border-start position-relative">
+              <h6>Timezone UTC</h6>
+              <h2 data-timezone=""></h2>
+            </div>
+            <div class="col p-2 w-100 col-min-h mx-auto my-auto border-start position-relative">
+              <h6>ISP</h6>
+              <h3 data-isp=""></h3>
+            </div>
+          </div>
+        </div>
+        <div id="map-holder" class="container-fluid">
+          <div id="map"></div>
+        </div>
+      </section>
+    </article>
+  </body>
+</html>

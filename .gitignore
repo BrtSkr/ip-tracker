@@ -5,3 +5,5 @@
 node_modules
 .cache
 design
+*.parcel-cache
+dist

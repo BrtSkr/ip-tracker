@@ -3,26 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
-
     <title>IP Address Tracker</title>
     <link rel="stylesheet" href="src/scss/main.scss" />
     <link
       rel="stylesheet"
       href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
     />
-
-    <script src="src/js/App.js" defer></script>
+    <script src="src/js/App.js" type="module" defer></script>
   </head>
-  <body class="container-fluid remove-all-margin">
 
-    <div class=" border border-white alert alert-danger error-popup  remove-all-padding  on-top spacer-h-10 text-center w-50 position-fixed" role="alert">
-             
-            <div class="w-100 mt-5 text-center position-absolute">
-              <h1 class="">You have encountered an error!</h1>
-               <p class="lead">Please make sure you entered IP address correctly</p>
-            </div>
-</div>
+  <body class="container-fluid remove-all-margin">
+    <div
+      class="border border-white alert alert-danger error-popup remove-all-padding on-top spacer-h-10 text-center w-50 position-fixed"
+      role="alert"
+    >
+      <div class="w-100 mt-5 text-center position-absolute">
+        <h1 class="">You have encountered an error!</h1>
+        <p class="lead">Please make sure you entered IP address correctly</p>
+      </div>
+    </div>
     <article class="w-100">
       <section class="w-100 min-vh-100">
         <video
